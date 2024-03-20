@@ -1,0 +1,328 @@
+.admin {
+    height: 100vh;
+    width: 100%;
+    background-color: var(--div-bg);
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    .admin-dashboard {
+        height: 100vh;
+        position: fixed;
+        background-color: var(--main-bg);
+        padding: 1rem  2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        left: 0;
+        text-align: center;
+            span{
+                display: flex;
+                padding-left: 1rem;
+                span{
+                    font-size: 1.9rem;
+                    font-weight: bold;
+                }
+                p{
+                    padding-top: 0.2rem;
+                    font-size: 1.3rem;
+                    font-family: 'Young Serif', serif;
+                }
+            }
+        .dashboard-link {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin-top: 3rem;
+
+            div {
+                height: 2.5rem;
+                width: 11rem;
+                justify-content: center;
+                align-items: center;
+                display: flex;
+                border-radius: 0.2rem;
+                cursor: pointer;
+                align-items: center;
+                gap: 1rem;
+                p{
+                    padding-top: 1rem;
+                    text-align: left;
+                }
+            }
+
+            .active {
+                background-color: var(--purple-color);
+                color: #fff;
+            }
+
+
+        }
+    }
+    .dashboard-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
+        width: 100%;
+        .admin-navbar{
+            background-color: var(--main-bg);
+            width: 100%;
+            text-align: center;
+            position: static;
+            height: 4rem;
+            top: 0;
+            right: 0;
+            color: #000;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 2rem;
+            align-items: center;
+            .dashboard-title{
+                padding-left: 14rem;
+                .fa-user-tie{
+                    font-size: 1.3rem;
+                    padding-right: 0.6rem;
+                }
+            }
+            button{
+                height: 2rem;
+                width: 6rem;
+                border: none;
+                background-color: #e6e6e6;
+                border-radius: 0.3rem;
+            }
+            button:hover{
+                background-color: var(--purple-color);
+                color: #fff;
+            }
+        }
+        .manage-user {
+            padding-top: 6rem;
+            align-items: center;
+            background-color: var(--div-bg);
+            color: var(--text-color);
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            flex-direction: column;
+            width: 90rem;
+            margin-left: 15rem;
+            overflow-y: scroll;
+
+            table {
+                width: 70%;
+
+                .manage-title {
+                    background-color: var(--purple-color);
+                    height: 3.5rem;
+                    color: #fff;
+                    text-align: center;
+                }
+
+                .user-info {
+                    background-color: var(--table-td);
+                    height: 3rem;
+
+                    td {
+                        text-align: center;
+                    }
+                    &:nth-child(odd) {
+                        background-color: #f0f0f0;
+                    }
+        
+                    &:nth-child(even) {
+                        background-color: #e6e6e6;
+                    }
+
+                    .edit-delete {
+                        display: flex;
+                        gap: 2rem;
+                        justify-content: center;
+                        align-items: center;
+                        padding-top: 0.5rem;
+
+                        button {
+                            border: none;
+                            background-color: transparent;
+                        }
+
+                        .fa-solid {
+                            font-size: 1.1rem;
+                        }
+                    }
+                }
+            }
+
+            .edit-section {
+                display: grid;
+                grid-template-columns: repeat(2,4fr);
+                gap: 1.2rem;
+                background-color: var(--main-bg);
+                height: auto;
+                padding: 0.5rem;
+                position: absolute;
+                padding: 1rem;
+                box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+                div {
+                    display: flex;
+                    flex-direction: column;
+                    label {
+                        font-weight: bold;
+                        margin-bottom: 5px;
+                    }
+                    input{
+                        width: 12rem;
+                        padding-left: 0.3rem;
+                        
+                    }
+                    select {
+                        width: 12rem;
+                        padding: 0.2rem;
+                        border: 1px solid #ccc;
+                        border-radius: 4px;
+                    }
+                    button{
+                        background-color: green;
+                        border: none;
+                        color: #fff;
+                        text-transform: capitalize;
+                        height: 2rem;
+                        font-size: 1rem;
+                        margin-top: 1.6rem;
+                    }
+                }
+            }
+        }
+
+        .approve-hostel {
+            padding-top: 6rem;
+            align-items: center;
+            background-color: var(--div-bg);
+            color: var(--text-color);
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            flex-direction: column;
+            width: 90rem;
+            margin-left: 15rem;
+            overflow-y: scroll;
+
+
+            table {
+                width: 70%;
+
+                .manage-title {
+                    background-color: var(--purple-color);
+                    height: 3.5rem;
+                    color: #fff;
+                    text-align: center;
+                }
+
+                .user-info {
+                    background-color: var(--table-td);
+                    height: 2.5rem;
+
+                    td {
+                        text-align: center;
+                    }
+                    &:nth-child(odd) {
+                        background-color: #f0f0f0;
+                    }
+        
+                    &:nth-child(even) {
+                        background-color: #e6e6e6;
+                    }
+
+                    .edit-delete {
+                        display: flex;
+                        gap: 2rem;
+                        justify-content: center;
+                        align-items: center;
+                        padding-top: 0.5rem;
+
+                        button {
+                            height: 1.5rem;
+                            width: 5rem;
+                            cursor: pointer;
+                        }
+
+                        .verify {
+                            border: 1px solid green;
+                            color: green;
+                        }
+
+                        .delete {
+                            border: 1px solid red;
+                            color: red;
+                        }
+                    }
+                }
+            }
+        }
+
+        .payment-report {
+            padding-top: 6rem;
+            align-items: center;
+            background-color: var(--div-bg);
+            color: var(--text-color);
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            flex-direction: column;
+            width: 90rem;
+            margin-left: 15rem;
+
+            table {
+                width: 70%;
+
+                .manage-title {
+                    background-color: var(--purple-color);
+                    height: 3.5rem;
+                    color: #fff;
+                    text-align: center;
+                }
+
+                .payment-info {
+                    background-color: var(--table-td);
+                    height: 3rem;
+
+                    td {
+                        text-align: center;
+                    }
+                    &:nth-child(odd) {
+                        background-color: #f0f0f0;
+                    }
+        
+                    &:nth-child(even) {
+                        background-color: #e6e6e6;
+                    }
+
+                    .edit-delete {
+                        display: flex;
+                        gap: 2rem;
+                        justify-content: center;
+                        align-items: center;
+                        padding-top: 0.5rem;
+
+                        button {
+                            height: 1.5rem;
+                            width: 5rem;
+                            cursor: pointer;
+                        }
+
+                        .verify {
+                            border: 1px solid green;
+                            color: green;
+                        }
+
+                        .delete {
+                            border: 1px solid red;
+                            color: red;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
